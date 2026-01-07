@@ -1,0 +1,8 @@
+{
+  "Temperature": -4,
+  "Humidity": 30,
+  "Wind_Speed": 11,
+  "Pressure": 220,
+  "Advisory": "Safe to go outside",
+  "Confidence": 1
+}

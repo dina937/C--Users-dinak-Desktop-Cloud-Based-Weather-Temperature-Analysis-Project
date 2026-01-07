@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: temperature-app
+  name: weather-temperature-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: temp
+      app: weather-temp
   template:
     metadata:
       labels:
-        app: temp
+        app: weather-temp
     spec:
       containers:
-      - name: temp-app
-        image: local/temp-app
-        ports:
-        - containerPort: 8000
+        - name: fastapi-weather-app
+          image: dinakhadka/weather-temperature-analysis:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
